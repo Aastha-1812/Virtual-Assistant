@@ -8,7 +8,7 @@ const UserContext = ({ children }) => {
   const [frontendImage, setFrontendImage] = useState(null);
   const [backendImage, setBackendImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
-  const serverUrl = "http://localhost:8000";
+  const serverUrl = "https://virtual-assistant-uja5.onrender.com";
 
   const handleCurrentUser = async () => {
     try {
