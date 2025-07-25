@@ -29,8 +29,8 @@ export const signUp = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 7 * 24 * 60 * 60 * 1000, //days*hrs*mins*secs*millisec  the time for which the token would be stored in the ccokie.
-      sameSite: "strict", //The cookie will  only be sent in requests originating from the same site.
-      secure: false,
+      sameSite: "None", //The cookie will  only be sent in requests originating from the same site.
+      secure: true,
     });
     return res.status(201).json(user);
   } catch (error) {
@@ -59,8 +59,8 @@ export const Login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 7 * 24 * 60 * 60 * 1000, //days*hrs*mins*secs*millisec  the time for which the token would be stored in the ccokie.
-      sameSite: "strict", //The cookie will not only be sent in requests originating from the same site.
-      secure: false,
+      sameSite: "None", //The cookie will not only be sent in requests originating from the same site.
+      secure: true,
     });
     return res.status(200).json(user);
   } catch (error) {
